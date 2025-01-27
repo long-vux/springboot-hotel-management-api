@@ -1,12 +1,14 @@
 package com.tdtu.hotel_management.service;
 
-import com.tdtu.hotel_management.dto.account.LoginDTO;
-import com.tdtu.hotel_management.dto.account.LoginResponseDTO;
-import com.tdtu.hotel_management.dto.account.RegisterDTO;
-import com.tdtu.hotel_management.dto.account.RegisterResponseDTO;
+import com.tdtu.hotel_management.dto.employee.EmployeeDTO;
+import com.tdtu.hotel_management.response.ApiResponse;
+
+import java.util.List;
 
 public interface EmployeeService {
-
-    RegisterResponseDTO registerEmployee(RegisterDTO registerDTO);
-    LoginResponseDTO loginEmployee(LoginDTO loginDTO);
+    ApiResponse<EmployeeDTO> createEmployee(EmployeeDTO employeeDTO);
+    List<EmployeeDTO> getAllEmployees();
+    EmployeeDTO getEmployeeById(Long employeeId);
+    ApiResponse<EmployeeDTO> updateEmployee(Long employeeId, EmployeeDTO employeeDTO);
+    ApiResponse<EmployeeDTO> deleteEmployee(Long employeeId);
 }

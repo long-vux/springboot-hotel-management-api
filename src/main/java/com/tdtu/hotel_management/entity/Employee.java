@@ -6,7 +6,7 @@
     import lombok.Data;
     import lombok.NoArgsConstructor;
 
-    import java.time.LocalDateTime;
+    import java.time.LocalDate;
 
     @Data
     @AllArgsConstructor
@@ -17,7 +17,7 @@
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long Id;
+        private Long id;
 
         @Column(name = "first_name")
         private String firstName;
@@ -33,7 +33,7 @@
         private String password;
 
         @Column(name = "date_of_birth")
-        private LocalDateTime dateOfBirth;
+        private LocalDate dateOfBirth;
 
         @Column(name = "role")
         private String role;
@@ -48,7 +48,7 @@
         private String phoneNumber;
 
         @Column(name = "is_women")
-        private String isWomen;
+        private Boolean isWomen;
 
         @Column(name = "image_path")
         private String imagePath;
