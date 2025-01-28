@@ -72,10 +72,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
             return new ApiResponse<>(true, "Employee updated successfully", responseDTO);
         }
-
         return new ApiResponse<>(false, "Employee not found");
     }
-
 
     @Override
     public ApiResponse<EmployeeDTO> deleteEmployee(Long employeeId) {
